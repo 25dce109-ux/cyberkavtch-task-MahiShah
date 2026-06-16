@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events | CyberKavach</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/forms.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body class="app-shell">
+  <div class="sidebar" id="sidebar">
+    <div class="brand-sidebar"><a href="index.html"><img src="assets/logo/logo.svg" loading="lazy" alt="CyberKavach logo"/> CyberKavach</a></div>
+    <nav class="sidebar-nav">
+      <a href="pages/dashboard-faculty.html">Dashboard</a>
+      <a href="approvals.html">Approvals</a>
+      <a href="events.html" class="active">Events</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="attendance.html">Attendance</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="settings.html">Settings</a>
+      <a href="login.html" class="logout-link">Logout</a>
+    </nav>
+  </div>
+  <div class="main-content">
+    <header class="app-topbar">
+      <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+      <h1>Event Registration & Team Management</h1>
+    </header>
+
+    <section class="form-card glass-card">
+      <h2>Create Event</h2>
+      <div class="grid-two">
+        <label for="eventName">Event Name</label>
+        <input id="eventName" type="text" placeholder="Event Name" />
+        <label for="eventDescription">Description</label>
+        <textarea id="eventDescription" placeholder="Event Description"></textarea>
+        <label for="eventDate">Date</label>
+        <input id="eventDate" type="date" />
+        <label for="eventVenue">Venue</label>
+        <input id="eventVenue" type="text" placeholder="Venue" />
+        <label for="eventSize">Team Size</label>
+        <input id="eventSize" type="number" placeholder="Team Size" min="1" />
+        <label for="eventDeadline">Registration Deadline</label>
+        <input id="eventDeadline" type="date" />
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-primary" id="createEvent">Create Event</button>
+        <button class="btn btn-outline" id="clearEvent">Clear</button>
+      </div>
+      <div class="search-row">
+        <input id="searchEvent" type="search" placeholder="Search events" />
+        <select id="filterEvent">
+          <option value="all">All Events</option>
+          <option value="open">Open</option>
+          <option value="closed">Closed</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="event-cards" id="eventGrid"></section>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <button class="back-to-top" id="backTop">↑</button>
+  <script src="js/storage.js"></script>
+  <script src="js/event.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analytics | CyberKavach</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="app-shell">
+  <div class="sidebar" id="sidebar">
+    <div class="brand-sidebar"><a href="index.html"><img src="assets/logo/logo.svg" loading="lazy" alt="CyberKavach logo"/> CyberKavach</a></div>
+    <nav class="sidebar-nav">
+      <a href="pages/dashboard-faculty.html">Dashboard</a>
+      <a href="approvals.html">Approvals</a>
+      <a href="events.html">Events</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="attendance.html">Attendance</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="analytics.html" class="active">Analytics</a>
+      <a href="settings.html">Settings</a>
+      <a href="login.html" class="logout-link">Logout</a>
+    </nav>
+  </div>
+  <div class="main-content">
+    <header class="app-topbar">
+      <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+      <h1>Analytics Dashboard</h1>
+      <div class="topbar-actions">
+        <button class="btn btn-outline" id="exportPDF">Export PDF</button>
+        <button class="btn btn-secondary" id="exportCSV">Export CSV</button>
+      </div>
+    </header>
+
+    <section class="chart-pane">
+      <div class="chart-card glass-card">
+        <h2>Event Growth</h2>
+        <canvas id="eventGrowthChart"></canvas>
+      </div>
+      <div class="chart-card glass-card">
+        <h2>Attendance Statistics</h2>
+        <canvas id="attendanceChart"></canvas>
+      </div>
+      <div class="chart-card glass-card">
+        <h2>Approval Trends</h2>
+        <canvas id="approvalChart"></canvas>
+      </div>
+      <div class="chart-card glass-card">
+        <h2>Certificate Statistics</h2>
+        <canvas id="certificateChart"></canvas>
+      </div>
+      <div class="chart-card glass-card">
+        <h2>Member Contributions</h2>
+        <canvas id="contributionChart"></canvas>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <button class="back-to-top" id="backTop">↑</button>
+  <script src="js/storage.js"></script>
+  <script src="js/permissions.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

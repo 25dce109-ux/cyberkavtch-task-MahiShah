@@ -1,229 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberKavach Club - Login</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            background: linear-gradient(to right, #2563eb, #4f46e5);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .login-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            width: 100%;
-            padding: 20px;
-        }
-
-        .login-box {
-            background: white;
-            border-radius: 12px;
-            padding: 40px;
-            width: 100%;
-            max-width: 400px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-        }
-
-        .login-box h1 {
-            text-align: center;
-            font-size: 32px;
-            color: #2563eb;
-            margin-bottom: 30px;
-            font-weight: bold;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #333;
-            font-size: 14px;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 14px;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: #2563eb;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-        }
-
-        .form-group input::placeholder {
-            color: #999;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 12px;
-            background: #2563eb;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .submit-btn:hover {
-            background: #1e40af;
-        }
-
-        .divider {
-            display: flex;
-            align-items: center;
-            margin: 30px 0;
-        }
-
-        .divider::before,
-        .divider::after {
-            content: "";
-            flex: 1;
-            height: 1px;
-            background: #ddd;
-        }
-
-        .divider span {
-            padding: 0 10px;
-            color: #999;
-            font-size: 12px;
-        }
-
-        .google-btn {
-            width: 100%;
-            padding: 12px;
-            background: white;
-            color: #333;
-            border: 2px solid #ddd;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .google-btn:hover {
-            background: #f5f5f5;
-            border-color: #999;
-        }
-
-        .demo-credentials {
-            margin-top: 25px;
-            padding: 15px;
-            background: #f0f9ff;
-            border-left: 4px solid #2563eb;
-            border-radius: 4px;
-            text-align: center;
-        }
-
-        .demo-credentials p {
-            font-size: 12px;
-            color: #333;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .demo-credentials code {
-            display: block;
-            font-family: 'Courier New', monospace;
-            background: white;
-            padding: 4px 8px;
-            border-radius: 3px;
-            font-size: 11px;
-            margin: 4px 0;
-            color: #2563eb;
-        }
-
-        @media (max-width: 480px) {
-            .login-box {
-                padding: 30px 20px;
-            }
-
-            .login-box h1 {
-                font-size: 24px;
-                margin-bottom: 20px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | CyberKavach</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/forms.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
-<body>
-    <div class="login-container">
-        <div class="login-box">
-            <h1>CyberKavach Club</h1>
+<body class="auth-page">
+  <div class="auth-shell">
+    <div class="auth-card glass-card">
+      <div class="auth-brand">
+        <h1><img src="assets/logo/logo.svg" loading="lazy" alt="logo" style="height:36px;vertical-align:middle;margin-right:8px;">CyberKavach</h1>
+        <p>Login to continue to your club dashboard.</p>
+      </div>
+      <form id="loginForm" class="auth-form">
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" placeholder="you@example.com" required />
 
-            <form onsubmit="handleLogin(event)">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input 
-                        type="email" 
-                        id="email"
-                        placeholder="your@email.com"
-                        value="admin@cyberkavach.com"
-                        required
-                    />
-                </div>
-
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input 
-                        type="password" 
-                        id="password"
-                        placeholder="Enter password"
-                        value="password123"
-                        required
-                    />
-                </div>
-
-                <button type="submit" class="submit-btn">Sign In</button>
-            </form>
-
-            <div class="divider">
-                <span>OR</span>
-            </div>
-
-            <button class="google-btn" onclick="alert('Google OAuth would redirect to login here')">
-                Sign in with Google
-            </button>
-
-            <div class="demo-credentials">
-                <p>Demo Credentials:</p>
-                <code>Email: admin@cyberkavach.com</code>
-                <code>Password: password123</code>
-            </div>
+        <label for="loginPassword">Password</label>
+        <div class="password-field">
+          <input type="password" id="loginPassword" placeholder="********" required />
+          <button type="button" class="password-toggle" id="toggleLoginPassword">👁</button>
         </div>
-    </div>
 
-    <script>
-        function handleLogin(event) {
-            event.preventDefault();
-            const email = document.getElementById('email').value;
-            alert(`Login successful!\n\nEmail: ${email}\n\nThis is a preview. Install Node.js and run 'npm run dev' to access the full application.`);
-        }
-    </script>
+        <label for="loginRole">Role</label>
+        <select id="loginRole" required>
+          <option value="">Select Role</option>
+          <option value="Faculty Coordinator">Faculty Coordinator</option>
+          <option value="Student Coordinator">Student Coordinator</option>
+          <option value="Tech Coordinator">Tech Coordinator</option>
+          <option value="Content Coordinator">Content Coordinator</option>
+          <option value="Social Media Coordinator">Social Media Coordinator</option>
+          <option value="Club Member">Club Member</option>
+          <option value="Student/Guest">Student/Guest</option>
+        </select>
+
+        <div class="form-row space-between">
+          <label class="checkbox-label"><input type="checkbox" id="rememberMe" /> Remember me</label>
+          <a href="#" class="link-small">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Login</button>
+        <p class="auth-note">New to CyberKavach? <a href="register.html">Create an account</a></p>
+        <p class="auth-error" id="loginError"></p>
+      </form>
+    </div>
+  </div>
+
+  <button class="back-to-top" id="backTop">↑</button>
+  <div class="toast" id="toast"></div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/permissions.js"></script>
 </body>
 </html>

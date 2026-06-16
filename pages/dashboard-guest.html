@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guest Dashboard | CyberKavach</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body class="app-shell">
+  <div class="sidebar" id="sidebar">
+    <div class="brand-sidebar"><a href="../index.html"><img src="../assets/logo/logo.svg" loading="lazy" alt="CyberKavach logo"/> CyberKavach</a></div>
+    <nav class="sidebar-nav">
+      <a href="dashboard-guest.html" class="active">Dashboard</a>
+      <a href="../events.html">Events</a>
+      <a href="../certificates.html">Certificates</a>
+      <a href="../attendance.html">Attendance</a>
+      <a href="../analytics.html">Analytics</a>
+      <a href="../settings.html">Settings</a>
+      <a href="../login.html" class="logout-link">Logout</a>
+    </nav>
+  </div>
+  <div class="main-content">
+    <header class="app-topbar">
+      <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+      <h1>Guest Dashboard</h1>
+      <div class="topbar-actions">
+        <button class="btn btn-outline" id="notifyBtn">Notifications <span class="badge">1</span></button>
+      </div>
+    </header>
+
+    <section class="dashboard-grid">
+      <article class="dashboard-card glass-card">
+        <h3>Public Events</h3>
+        <p class="metric">5</p>
+      </article>
+      <article class="dashboard-card glass-card">
+        <h3>Registration Open</h3>
+        <p class="metric">3</p>
+      </article>
+      <article class="dashboard-card glass-card">
+        <h3>Upcoming Sessions</h3>
+        <p class="metric">2</p>
+      </article>
+      <article class="dashboard-card glass-card">
+        <h3>Explore Activities</h3>
+        <p class="metric">24</p>
+      </article>
+    </section>
+
+    <section class="analytics-section">
+      <div class="chart-card glass-card">
+        <div class="card-header"><h2>Event Overview</h2></div>
+        <div class="chart-placeholder">Chart area</div>
+      </div>
+      <div class="chart-card glass-card">
+        <div class="card-header"><h2>Registration Trend</h2></div>
+        <div class="chart-placeholder">Chart area</div>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <div class="card-table glass-card">
+        <div class="card-header"><h2>Available Events</h2></div>
+        <table>
+          <thead><tr><th>Event</th><th>Date</th><th>Seats</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Cyber Awareness</td><td>Jun 26</td><td>50</td><td><span class="badge badge-green">Open</span></td></tr>
+            <tr><td>Guest Lecture</td><td>Jun 28</td><td>30</td><td><span class="badge badge-yellow">Filling</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-table glass-card">
+        <div class="card-header"><h2>Club Activities</h2></div>
+        <ul class="highlight-list">
+          <li>Event showcase page</li>
+          <li>Volunteer registration form</li>
+          <li>Community outreach posts</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <button class="back-to-top" id="backTop">↑</button>
+  <script src="../js/storage.js"></script>
+  <script src="../js/permissions.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

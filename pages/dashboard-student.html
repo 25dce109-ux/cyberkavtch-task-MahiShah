@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Dashboard | CyberKavach</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body class="app-shell">
+  <div class="sidebar" id="sidebar">
+    <div class="brand-sidebar"><a href="../index.html"><img src="../assets/logo/logo.svg" loading="lazy" alt="CyberKavach logo"/> CyberKavach</a></div>
+    <nav class="sidebar-nav">
+      <a href="dashboard-student.html" class="active">Dashboard</a>
+      <a href="../approvals.html">Approvals</a>
+      <a href="../events.html">Events</a>
+      <a href="../certificates.html">Certificates</a>
+      <a href="../attendance.html">Attendance</a>
+      <a href="../rewards.html">Rewards</a>
+      <a href="../analytics.html">Analytics</a>
+      <a href="../settings.html">Settings</a>
+      <a href="../login.html" class="logout-link">Logout</a>
+    </nav>
+  </div>
+  <div class="main-content">
+    <header class="app-topbar">
+      <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+      <h1>Student Coordinator Dashboard</h1>
+      <div class="topbar-actions">
+        <button class="btn btn-outline" id="notifyBtn">Notifications <span class="badge">2</span></button>
+      </div>
+    </header>
+
+    <section class="dashboard-grid">
+      <article class="dashboard-card glass-card">
+        <h3>Event Statistics</h3>
+        <p class="metric">18</p>
+      </article>
+      <article class="dashboard-card glass-card">
+        <h3>Team Registrations</h3>
+        <p class="metric">46</p>
+      </article>
+      <article class="dashboard-card glass-card">
+        <h3>Pending Approvals</h3>
+        <p class="metric">6</p>
+      </article>
+      <article class="dashboard-card glass-card">
+        <h3>Attendance Records</h3>
+        <p class="metric">94%</p>
+      </article>
+    </section>
+
+    <section class="analytics-section">
+      <div class="chart-card glass-card">
+        <div class="card-header"><h2>Event Progress</h2></div>
+        <div class="chart-placeholder">Chart area</div>
+      </div>
+      <div class="chart-card glass-card">
+        <div class="card-header"><h2>Approval Pipeline</h2></div>
+        <div class="chart-placeholder">Chart area</div>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <div class="card-table glass-card">
+        <div class="card-header"><h2>Pending Teams</h2></div>
+        <table>
+          <thead><tr><th>Team</th><th>Event</th><th>Members</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Team Hydra</td><td>Cyber Quiz</td><td>5</td><td><span class="badge badge-yellow">Pending</span></td></tr>
+            <tr><td>Agni Squad</td><td>Capture the Flag</td><td>4</td><td><span class="badge badge-blue">Review</span></td></tr>
+            <tr><td>Byte Force</td><td>Appathon</td><td>6</td><td><span class="badge badge-green">Approved</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-table glass-card">
+        <div class="card-header"><h2>Attendance Highlights</h2></div>
+        <ul class="highlight-list">
+          <li>Hackathon - 92%</li>
+          <li>Workshop - 88%</li>
+          <li>Webinar - 74%</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <button class="back-to-top" id="backTop">↑</button>
+  <script src="../js/storage.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faculty Dashboard | CyberKavach</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body class="app-shell">
+  <div class="sidebar" id="sidebar">
+    <div class="brand-sidebar"><a href="../index.html"><img src="../assets/logo/logo.svg" loading="lazy" alt="CyberKavach logo"/> CyberKavach</a></div>
+    <nav class="sidebar-nav">
+      <a href="dashboard-faculty.html" class="active">Dashboard</a>
+      <a href="../approvals.html">Approvals</a>
+      <a href="../events.html">Events</a>
+      <a href="../certificates.html">Certificates</a>
+      <a href="../attendance.html">Attendance</a>
+      <a href="../rewards.html">Rewards</a>
+      <a href="../analytics.html">Analytics</a>
+      <a href="../settings.html">Settings</a>
+      <a href="../login.html" class="logout-link">Logout</a>
+    </nav>
+  </div>
+  <div class="main-content">
+    <header class="app-topbar">
+      <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+      <h1>Faculty Coordinator Dashboard</h1>
+      <div class="topbar-actions">
+        <button class="btn btn-outline" id="notifyBtn">Notifications <span class="badge">3</span></button>
+      </div>
+    </header>
+
+    <section class="dashboard-grid">
+      <article class="dashboard-card glass-card">
+        <h3>Total Events</h3>
+        <p class="metric">24</p>
+      </article>
+      <article class="dashboard-card glass-card">
+        <h3>Pending Requests</h3>
+        <p class="metric">8</p>
+      </article>
+      <article class="dashboard-card glass-card">
+        <h3>Certificates Generated</h3>
+        <p class="metric">312</p>
+      </article>
+      <article class="dashboard-card glass-card">
+        <h3>Active Members</h3>
+        <p class="metric">682</p>
+      </article>
+    </section>
+
+    <section class="analytics-section">
+      <div class="chart-card glass-card">
+        <div class="card-header"><h2>Monthly Event Statistics</h2></div>
+        <div class="chart-placeholder">Chart area</div>
+      </div>
+      <div class="chart-card glass-card">
+        <div class="card-header"><h2>Approval Analytics</h2></div>
+        <div class="chart-placeholder">Chart area</div>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <div class="card-table glass-card">
+        <div class="card-header"><h2>Recent Requests</h2></div>
+        <table>
+          <thead>
+            <tr><th>ID</th><th>Request</th><th>Submitted By</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>REQ-102</td><td>Venue Permission</td><td>Riya Sharma</td><td><span class="badge badge-blue">Under Review</span></td></tr>
+            <tr><td>REQ-117</td><td>Budget Approval</td><td>Aman Patel</td><td><span class="badge badge-yellow">Pending</span></td></tr>
+            <tr><td>REQ-125</td><td>Certificate Generation</td><td>Priya Singh</td><td><span class="badge badge-green">Approved</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-table glass-card">
+        <div class="card-header"><h2>Top Contributors</h2></div>
+        <ol class="top-list">
+          <li>Akash Kumar</li>
+          <li>Neha Verma</li>
+          <li>Devanshi Rao</li>
+        </ol>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <button class="back-to-top" id="backTop">↑</button>
+  <script src="../js/storage.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

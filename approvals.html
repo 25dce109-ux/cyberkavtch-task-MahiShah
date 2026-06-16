@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Approvals | CyberKavach</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body class="app-shell">
+  <div class="sidebar" id="sidebar">
+    <div class="brand-sidebar"><a href="index.html"><img src="assets/logo/logo.svg" loading="lazy" alt="CyberKavach logo"/> CyberKavach</a></div>
+    <nav class="sidebar-nav">
+      <a href="pages/dashboard-faculty.html">Dashboard</a>
+      <a href="approvals.html" class="active">Approvals</a>
+      <a href="events.html">Events</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="attendance.html">Attendance</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="settings.html">Settings</a>
+      <a href="login.html" class="logout-link">Logout</a>
+    </nav>
+  </div>
+  <div class="main-content">
+    <header class="app-topbar">
+      <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+      <h1>Multi-Level Approval System</h1>
+    </header>
+
+    <section class="approval-grid">
+      <article class="approval-card glass-card">
+        <h3>Event Permission</h3>
+        <p>Submitted by Aditi Sharma</p>
+        <span class="badge badge-yellow">Pending</span>
+      </article>
+      <article class="approval-card glass-card">
+        <h3>Resource Request</h3>
+        <p>Submitted by Pranav Joshi</p>
+        <span class="badge badge-blue">Under Review</span>
+      </article>
+      <article class="approval-card glass-card">
+        <h3>Budget Approval</h3>
+        <p>Submitted by Riya Verma</p>
+        <span class="badge badge-green">Approved</span>
+      </article>
+      <article class="approval-card glass-card">
+        <h3>Content Publishing</h3>
+        <p>Submitted by Meera Patel</p>
+        <span class="badge badge-red">Rejected</span>
+      </article>
+    </section>
+
+    <section class="timeline-section glass-card">
+      <div class="card-header"><h2>Approval Timeline</h2></div>
+      <ul class="timeline-list">
+        <li><strong>Club Member</strong> submitted request • 10:04 AM</li>
+        <li><strong>Tech Coordinator</strong> reviewed • 11:20 AM</li>
+        <li><strong>Student Coordinator</strong> approved • 12:05 PM</li>
+        <li><strong>Faculty Coordinator</strong> final decision • 12:40 PM</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <button class="back-to-top" id="backTop">↑</button>
+  <script src="js/storage.js"></script>
+  <script src="js/approval.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

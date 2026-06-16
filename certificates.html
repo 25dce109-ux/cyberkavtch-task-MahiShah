@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificates | CyberKavach</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/forms.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body class="app-shell">
+  <div class="sidebar" id="sidebar">
+    <div class="brand-sidebar"><a href="index.html"><img src="assets/logo/logo.svg" loading="lazy" alt="CyberKavach logo"/> CyberKavach</a></div>
+    <nav class="sidebar-nav">
+      <a href="pages/dashboard-faculty.html">Dashboard</a>
+      <a href="approvals.html">Approvals</a>
+      <a href="events.html">Events</a>
+      <a href="certificates.html" class="active">Certificates</a>
+      <a href="attendance.html">Attendance</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="settings.html">Settings</a>
+      <a href="login.html" class="logout-link">Logout</a>
+    </nav>
+  </div>
+  <div class="main-content">
+    <header class="app-topbar">
+      <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+      <h1>Smart Certificate System</h1>
+    </header>
+
+    <section class="card-grid">
+      <div class="glass-card certificate-form">
+        <h2>Generate Certificate</h2>
+        <label for="certName">Participant Name</label>
+        <input type="text" id="certName" placeholder="Participant Name" />
+        <label for="certEvent">Event Name</label>
+        <input type="text" id="certEvent" placeholder="Event Name" />
+        <label for="certTemplate">Template URL</label>
+        <input type="text" id="certTemplate" placeholder="Certificate background URL" />
+        <button class="btn btn-primary" id="generateCert">Generate Certificate</button>
+        <button class="btn btn-outline" id="downloadCert">Download PDF</button>
+      </div>
+      <div class="glass-card certificate-preview">
+        <h2>Preview</h2>
+        <div class="preview-box" id="certificatePreview">Certificate preview will appear here.</div>
+      </div>
+    </section>
+
+    <section class="verification-section glass-card">
+      <div class="card-header"><h2>Verify Certificate</h2></div>
+      <div class="verify-row">
+        <input type="text" id="verifyId" placeholder="Enter Certificate ID" />
+        <button class="btn btn-primary" id="verifyCert">Verify</button>
+      </div>
+      <div id="verifyResult" class="verify-result">Enter a valid ID to check certificate details.</div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <button class="back-to-top" id="backTop">↑</button>
+  <script src="js/storage.js"></script>
+  <script src="js/permissions.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="js/certificate.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

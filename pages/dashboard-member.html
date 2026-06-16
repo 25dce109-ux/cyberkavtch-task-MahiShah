@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Member Dashboard | CyberKavach</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body class="app-shell">
+  <div class="sidebar" id="sidebar">
+    <div class="brand-sidebar"><a href="../index.html"><img src="../assets/logo/logo.svg" loading="lazy" alt="CyberKavach logo"/> CyberKavach</a></div>
+    <nav class="sidebar-nav">
+      <a href="dashboard-member.html" class="active">Dashboard</a>
+      <a href="../approvals.html">Approvals</a>
+      <a href="../events.html">Events</a>
+      <a href="../certificates.html">Certificates</a>
+      <a href="../attendance.html">Attendance</a>
+      <a href="../rewards.html">Rewards</a>
+      <a href="../analytics.html">Analytics</a>
+      <a href="../settings.html">Settings</a>
+      <a href="../login.html" class="logout-link">Logout</a>
+    </nav>
+  </div>
+  <div class="main-content">
+    <header class="app-topbar">
+      <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+      <h1>Club Member Dashboard</h1>
+      <div class="topbar-actions">
+        <button class="btn btn-outline" id="notifyBtn">Notifications <span class="badge">1</span></button>
+      </div>
+    </header>
+
+    <section class="dashboard-grid">
+      <article class="dashboard-card glass-card">
+        <h3>Event Registrations</h3>
+        <p class="metric">7</p>
+      </article>
+      <article class="dashboard-card glass-card">
+        <h3>Certificates</h3>
+        <p class="metric">4</p>
+      </article>
+      <article class="dashboard-card glass-card">
+        <h3>Attendance History</h3>
+        <p class="metric">92%</p>
+      </article>
+      <article class="dashboard-card glass-card">
+        <h3>Reward Points</h3>
+        <p class="metric">520</p>
+      </article>
+    </section>
+
+    <section class="analytics-section">
+      <div class="chart-card glass-card">
+        <div class="card-header"><h2>Recent Activity</h2></div>
+        <div class="chart-placeholder">Activity summary</div>
+      </div>
+      <div class="chart-card glass-card">
+        <div class="card-header"><h2>Contributions</h2></div>
+        <div class="chart-placeholder">Chart area</div>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <div class="card-table glass-card">
+        <div class="card-header"><h2>Registered Events</h2></div>
+        <table>
+          <thead><tr><th>Event</th><th>Date</th><th>Status</th><th>Team</th></tr></thead>
+          <tbody>
+            <tr><td>Cyber Workshop</td><td>Jun 20</td><td><span class="badge badge-green">Confirmed</span></td><td>Alpha</td></tr>
+            <tr><td>Quiz Night</td><td>Jun 24</td><td><span class="badge badge-yellow">Pending</span></td><td>Beta</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-table glass-card">
+        <div class="card-header"><h2>Achievements</h2></div>
+        <ul class="highlight-list">
+          <li>Member of the month</li>
+          <li>5 events attended</li>
+          <li>Top 10 contributor</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <button class="back-to-top" id="backTop">↑</button>
+  <script src="../js/storage.js"></script>
+  <script src="../js/permissions.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

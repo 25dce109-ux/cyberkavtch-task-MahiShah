@@ -1,0 +1,30 @@
+@media (max-width: 960px) {
+  .container { padding: 0 18px; }
+}
+
+@media (max-width: 768px) {
+  .sidebar { width: 240px; }
+  .nav-links { display: none; }
+  .nav-toggle { display: inline-flex; }
+  .hero { grid-template-columns: 1fr; }
+  .feature-grid,
+  .stats-grid,
+  .dashboard-grid,
+  .event-cards,
+  .settings-grid,
+  .analytics-section { grid-template-columns: 1fr; }
+  .cta-card { flex-direction: column; align-items: stretch; }
+  .card-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+}
+
+@media (max-width: 520px) {
+  .sidebar { width: 100%; }
+  .main-content { padding: 18px; }
+  .hero-copy h1 { font-size: 2.4rem; }
+  .btn { width: 100%; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .search-row,
+  .form-actions,
+  .verify-row,
+  .attendance-controls { flex-direction: column; }
+}

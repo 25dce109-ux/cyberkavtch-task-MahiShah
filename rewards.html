@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rewards | CyberKavach</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body class="app-shell">
+  <div class="sidebar" id="sidebar">
+    <div class="brand-sidebar"><a href="index.html"><img src="assets/logo/logo.svg" loading="lazy" alt="CyberKavach logo"/> CyberKavach</a></div>
+    <nav class="sidebar-nav">
+      <a href="pages/dashboard-faculty.html">Dashboard</a>
+      <a href="approvals.html">Approvals</a>
+      <a href="events.html">Events</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="attendance.html">Attendance</a>
+      <a href="rewards.html" class="active">Rewards</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="settings.html">Settings</a>
+      <a href="login.html" class="logout-link">Logout</a>
+    </nav>
+  </div>
+  <div class="main-content">
+    <header class="app-topbar">
+      <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+      <h1>Appreciation & Reward System</h1>
+    </header>
+
+    <section class="dashboard-grid">
+      <article class="dashboard-card glass-card">
+        <h3>Total Points</h3>
+        <p class="metric">1,820</p>
+      </article>
+      <article class="dashboard-card glass-card">
+        <h3>Achievements</h3>
+        <p class="metric">12</p>
+      </article>
+      <article class="dashboard-card glass-card">
+        <h3>Badges Earned</h3>
+        <p class="metric">5</p>
+      </article>
+      <article class="dashboard-card glass-card">
+        <h3>Top Contributors</h3>
+        <p class="metric">3</p>
+      </article>
+    </section>
+
+    <section class="rewards-section">
+      <div class="reward-card glass-card">
+        <h2>Contribution History</h2>
+        <ul class="highlight-list">
+          <li>Best Volunteer: 400 pts</li>
+          <li>Creative Contribution: 320 pts</li>
+          <li>Innovation Award: 280 pts</li>
+        </ul>
+      </div>
+      <div class="reward-card glass-card">
+        <h2>Achievement Levels</h2>
+        <div class="achievement-list">
+          <span class="badge badge-gold">Gold</span>
+          <span class="badge badge-silver">Silver</span>
+          <span class="badge badge-bronze">Bronze</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="leaderboard-section glass-card">
+      <div class="card-header"><h2>Leaderboard</h2></div>
+      <table>
+        <thead><tr><th>Rank</th><th>Name</th><th>Points</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Priya</td><td>920</td></tr>
+          <tr><td>2</td><td>Tanmay</td><td>780</td></tr>
+          <tr><td>3</td><td>Sara</td><td>640</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <button class="back-to-top" id="backTop">↑</button>
+  <script src="js/storage.js"></script>
+  <script src="js/rewards.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

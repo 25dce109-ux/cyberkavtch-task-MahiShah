@@ -1,293 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberKavach Club - Digital Operating System</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            background: linear-gradient(to right, #2563eb, #4f46e5);
-            color: #333;
-        }
-
-        .nav {
-            background: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            padding: 0 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 60px;
-        }
-
-        .nav h1 {
-            font-size: 24px;
-            color: #2563eb;
-            font-weight: bold;
-        }
-
-        .nav-right {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .nav-right span {
-            color: #666;
-        }
-
-        .logout {
-            color: #dc2626;
-            text-decoration: none;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .header {
-            text-align: center;
-            color: white;
-            margin-bottom: 50px;
-        }
-
-        .header h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-
-        .header p {
-            font-size: 20px;
-            opacity: 0.9;
-        }
-
-        .dashboard {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 24px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
-        }
-
-        .card-icon {
-            font-size: 48px;
-            margin-bottom: 12px;
-        }
-
-        .card h3 {
-            font-size: 24px;
-            color: #1e40af;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        .card p {
-            color: #666;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .login-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(to right, #2563eb, #4f46e5);
-        }
-
-        .login-box {
-            background: white;
-            border-radius: 12px;
-            padding: 40px;
-            width: 100%;
-            max-width: 400px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-        }
-
-        .login-box h1 {
-            text-align: center;
-            font-size: 32px;
-            color: #2563eb;
-            margin-bottom: 30px;
-            font-weight: bold;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #333;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 14px;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: #2563eb;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-        }
-
-        .btn {
-            width: 100%;
-            padding: 12px;
-            background: #2563eb;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .btn:hover {
-            background: #1e40af;
-        }
-
-        .btn-secondary {
-            background: white;
-            color: #333;
-            border: 2px solid #ddd;
-            margin-top: 10px;
-        }
-
-        .btn-secondary:hover {
-            background: #f5f5f5;
-        }
-
-        .demo-credentials {
-            margin-top: 20px;
-            padding: 15px;
-            background: #f0f9ff;
-            border-left: 4px solid #2563eb;
-            font-size: 12px;
-            color: #333;
-            text-align: center;
-            border-radius: 4px;
-        }
-
-        @media (max-width: 768px) {
-            .nav {
-                padding: 0 20px;
-            }
-
-            .header h1 {
-                font-size: 32px;
-            }
-
-            .dashboard {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberKavach Club Management System</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
-    <!-- Navigation -->
-    <div class="nav">
-        <h1>🛡️ CyberKavach Club</h1>
-        <div class="nav-right">
-            <span>Admin User</span>
-            <a href="#" class="logout">Logout</a>
+  <div class="progress-top" id="progressBar"></div>
+  <header class="hero-header">
+    <nav class="topnav container">
+      <a href="index.html" class="brand"><img src="assets/logo/logo.svg" loading="lazy" alt="CyberKavach logo"/> CyberKavach</a>
+      <div class="nav-links" id="mainNav">
+        <a href="#features">Features</a>
+        <a href="#stats">Statistics</a>
+        <a href="#contact">Contact</a>
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary">Register</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">☰</button>
+    </nav>
+
+    <section class="hero container">
+      <div class="hero-copy">
+        <span class="eyebrow">Secure. Smart. Streamlined.</span>
+        <h1>CyberKavach Club Management System</h1>
+        <p>Complete Digital Platform for Event Management, Multi-Level Approval, Certificates, Attendance and Member Recognition.</p>
+        <div class="hero-actions">
+          <a href="register.html" class="btn btn-primary">Get Started</a>
+          <a href="#features" class="btn btn-outline">Explore Features</a>
         </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card glass-card">
+          <div class="hero-grid">
+            <div>
+              <h3>Real-time approvals</h3>
+              <p>Track every request through multiple role levels with clean audit trails.</p>
+            </div>
+            <div class="stat-pill">Secure</div>
+          </div>
+          <div class="hero-illustration">
+            <div class="cyber-shield"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="features container" id="features">
+      <div class="section-heading">
+        <p class="eyebrow">Key Features</p>
+        <h2>Built for modern club operations and cyber resilience</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card glass-card">
+          <div class="feature-icon">✓</div>
+          <h3>Multi-Level Approval Workflow</h3>
+          <p>Simple request routing across member, coordinator and faculty workflows.</p>
+        </article>
+        <article class="feature-card glass-card">
+          <div class="feature-icon">📜</div>
+          <h3>Smart Certificate Generation</h3>
+          <p>Generate, preview and verify certificates instantly with contextual IDs.</p>
+        </article>
+        <article class="feature-card glass-card">
+          <div class="feature-icon">🗓</div>
+          <h3>Event Registration & Team Management</h3>
+          <p>Create events, manage teams and collect registrations with QR-ready IDs.</p>
+        </article>
+        <article class="feature-card glass-card">
+          <div class="feature-icon">📡</div>
+          <h3>QR Attendance System</h3>
+          <p>Check-in, check-out and monitor live attendance data from any page.</p>
+        </article>
+        <article class="feature-card glass-card">
+          <div class="feature-icon">🏅</div>
+          <h3>Reward & Recognition System</h3>
+          <p>Automated badges, leaderboards and achievement levels for active members.</p>
+        </article>
+        <article class="feature-card glass-card">
+          <div class="feature-icon">📈</div>
+          <h3>Analytics Dashboard</h3>
+          <p>Visualize approvals, attendance, events and certificates on one screen.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="statistics container" id="stats">
+      <div class="section-heading">
+        <p class="eyebrow">Trusted by students and coordinators</p>
+        <h2>Impact metrics from the CyberKavach system</h2>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card glass-card">
+          <h3 class="count" data-target="3000">0</h3>
+          <p>Certificates Generated</p>
+        </div>
+        <div class="stat-card glass-card">
+          <h3 class="count" data-target="500">0</h3>
+          <p>Events Managed</p>
+        </div>
+        <div class="stat-card glass-card">
+          <h3 class="count" data-target="7">0</h3>
+          <p>User Roles</p>
+        </div>
+        <div class="stat-card glass-card">
+          <h3 class="count" data-target="1000">0</h3>
+          <p>Active Members</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta container" id="contact">
+      <div class="cta-card glass-card">
+        <div>
+          <h2>Ready to secure your club operations?</h2>
+          <p>Join CyberKavach and manage events, approvals, certificates and attendance from one dashboard.</p>
+        </div>
+        <a href="login.html" class="btn btn-primary">Start Now</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div class="footer-grid">
+      <div>
+        <h3>About CyberKavach</h3>
+        <p>CyberKavach is a club management suite designed for student societies, coordinators and faculty to manage events securely.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="#features">Features</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>support@cyberkavach.club</p>
+        <p>+91 98765 43210</p>
+      </div>
+      <div>
+        <h3>Follow</h3>
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+      </div>
     </div>
+    <p class="footer-note">© 2026 CyberKavach. All rights reserved.</p>
+  </footer>
 
-    <!-- Home Page Dashboard -->
-    <div class="container">
-        <div class="header">
-            <h1>Welcome to CyberKavach Club</h1>
-            <p>Digital Operating System Platform</p>
-        </div>
-
-        <div class="dashboard">
-            <!-- Module 1: Authentication -->
-            <a href="#" class="card">
-                <div class="card-icon">🔐</div>
-                <h3>Authentication</h3>
-                <p>Role-based login & Multi-level approvals</p>
-            </a>
-
-            <!-- Module 2: Certificates -->
-            <a href="#" class="card">
-                <div class="card-icon">📜</div>
-                <h3>Certificates</h3>
-                <p>Generate, verify & track certificates</p>
-            </a>
-
-            <!-- Module 3: Events -->
-            <a href="#" class="card">
-                <div class="card-icon">📅</div>
-                <h3>Events</h3>
-                <p>Create & manage events</p>
-            </a>
-
-            <!-- Module 4: Attendance -->
-            <a href="#" class="card">
-                <div class="card-icon">✓</div>
-                <h3>Attendance</h3>
-                <p>Check-in/Check-out with QR codes</p>
-            </a>
-
-            <!-- Module 5: Appreciation -->
-            <a href="#" class="card">
-                <div class="card-icon">⭐</div>
-                <h3>Appreciation</h3>
-                <p>Points & recognition system</p>
-            </a>
-
-            <!-- Module 6: Analytics -->
-            <a href="#" class="card">
-                <div class="card-icon">📊</div>
-                <h3>Analytics</h3>
-                <p>Dashboards & reporting</p>
-            </a>
-        </div>
+  <button class="back-to-top" id="backTop">↑</button>
+  <div class="toast" id="toast"></div>
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-header">
+      <span>CyberBot</span>
+      <button id="closeChat">×</button>
     </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-message bot">Hi, I am CyberBot. Ask me about approvals, events or certificates.</div>
+    </div>
+    <form id="chatForm" class="chat-form">
+      <input type="text" id="chatInput" placeholder="Ask CyberBot..." autocomplete="off" />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  <button class="chat-open" id="openChat">CyberBot</button>
 
-    <script>
-        // Add smooth scroll and click effects
-        document.querySelectorAll('.card').forEach(card => {
-            card.addEventListener('click', function(e) {
-                e.preventDefault();
-                alert('Module: ' + this.querySelector('h3').textContent + '\n\nThis is a preview. Install and run the Next.js app to access full functionality.');
-            });
-        });
-    </script>
+  <script src="js/storage.js"></script>
+  <script src="js/dashboard.js"></script>
 </body>
 </html>

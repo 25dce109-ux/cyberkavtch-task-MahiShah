@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | CyberKavach</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/forms.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body class="auth-page">
+  <div class="auth-shell">
+    <div class="auth-card glass-card">
+      <div class="auth-brand">
+        <h1><img src="assets/logo/logo.svg" loading="lazy" alt="logo" style="height:36px;vertical-align:middle;margin-right:8px;">Create Account</h1>
+        <p>Join CyberKavach for multi-level approvals, certificates and events.</p>
+      </div>
+      <form id="registerForm" class="auth-form">
+        <label for="registerName">Name</label>
+        <input type="text" id="registerName" placeholder="Your full name" required />
+
+        <label for="registerEmail">Email</label>
+        <input type="email" id="registerEmail" placeholder="you@example.com" required />
+
+        <label for="registerDepartment">Department</label>
+        <input type="text" id="registerDepartment" placeholder="Department or Club" required />
+
+        <label for="registerRole">Role</label>
+        <select id="registerRole" required>
+          <option value="">Select Role</option>
+          <option value="Faculty Coordinator">Faculty Coordinator</option>
+          <option value="Student Coordinator">Student Coordinator</option>
+          <option value="Tech Coordinator">Tech Coordinator</option>
+          <option value="Content Coordinator">Content Coordinator</option>
+          <option value="Social Media Coordinator">Social Media Coordinator</option>
+          <option value="Club Member">Club Member</option>
+          <option value="Student/Guest">Student/Guest</option>
+        </select>
+
+        <label for="registerPassword">Password</label>
+        <div class="password-field">
+          <input type="password" id="registerPassword" placeholder="Create password" required />
+          <button type="button" class="password-toggle" id="toggleRegisterPassword">👁</button>
+        </div>
+
+        <label for="registerConfirmPassword">Confirm Password</label>
+        <div class="password-field">
+          <input type="password" id="registerConfirmPassword" placeholder="Re-enter password" required />
+          <button type="button" class="password-toggle" id="toggleConfirmPassword">👁</button>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Register</button>
+        <p class="auth-note">Already have an account? <a href="login.html">Login here</a></p>
+        <p class="auth-error" id="registerError"></p>
+      </form>
+    </div>
+  </div>
+
+  <button class="back-to-top" id="backTop">↑</button>
+  <div class="toast" id="toast"></div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/permissions.js"></script>
+</body>
+</html>
